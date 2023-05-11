@@ -1,0 +1,13 @@
+main:
+  components_repository: "https://github.com/CAMM961001/my_website"
+  streamlit: "https://streamlit.io/"
+  project_name: my_website
+  steps: all
+styling:
+  page_title: "MiguelCastaneda"
+  layout: "wide"
+  pages: ['About Me','Portfolio']
+  menu_icons: ['house', 'book', 'folder2-open', 'envelope']
+  fontsize: [20]
+path:
+  db_conn: "db-credentials.json"
