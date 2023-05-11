@@ -13,4 +13,4 @@ styling:
   menu_icons: ['house', 'folder2-open']
   fontsize: [20]
 path:
-  db_conn: "db-credentials.json"
+  resume: "docs/resume.pdf"
