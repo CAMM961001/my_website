@@ -1,15 +1,15 @@
 import streamlit as st
 
-import src.settings as setts
-from src.portfolio import Portfolio
-from src.about_me import AboutMe
-
 from streamlit_option_menu import option_menu
+
+from src.settings import Settings
+from src.side_bar import SideBar
+from src.about_me import AboutMe
+from src.portfolio import Portfolio
 
 
 # App settings
-settings = setts.Settings()
-
+settings = Settings()
 
 # Site settings
 st.set_page_config(
@@ -20,14 +20,15 @@ st.set_page_config(
 # --- SIDE BAR ---
 with st.sidebar:
     
-    # Professional summary
-    st.write('Welcome\n')
+    # Initialize sidebar instance
+    sb_ = SideBar()
     
-    st.markdown('---')
+    # Side bar title
+    st.title(settings.config['styling']['page_title'])
+
+    sb_.download_resume()
 
     # Navigation menu
-    st.write('Selecciona una página')
-
     selected = option_menu(
         menu_title=None,
         options=settings.config['styling']['pages'],
@@ -35,7 +36,9 @@ with st.sidebar:
         menu_icon='cast',
         default_index=0)
     
-    st.markdown('---')
+    sb_.profile_picture()
+
+    sb_.social_media_buttons()
 
 
 # --- PAGES: About Me ---
@@ -45,7 +48,7 @@ if selected == settings.config['styling']['pages'][0]:
 
     st.title(pages_.page_title)
 
-    st.markdown(pages_.descripcion)
+    st.write(pages_.descripcion, unsafe_allow_html=True)
         
     st.markdown('---')
 
