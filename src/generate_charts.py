@@ -44,28 +44,28 @@ covid_x = pd.to_datetime('20/03/2020', format='%d/%m/%Y')
 # Covid pandemics reference line
 ax.axvline(
     x=covid_x
-    ,color='red',
-    alpha=0.4)
+    ,color='red'
+    ,alpha=0.4)
 
 # Covid pandemics annotation
 ax.text(
     x=covid_x
     ,y=ymin + 0.3
-    ,s=' Coronavirus isolation\n is declared in Mexico',
-    alpha=0.4)
+    ,s=' Coronavirus isolation\n is declared in Mexico'
+    ,alpha=0.4)
 
 # Today reference line
 ax.axvline(
     x=today
-    ,color='red',
-    alpha=0.4)
+    ,color='red'
+    ,alpha=0.4)
 
 # Today annotation
 ax.text(
     x=today
     ,y=1.3
-    ,s=' The best is\n yet to come...',
-    alpha=0.4)
+    ,s=' The best is\n yet to come...'
+    ,alpha=0.4)
 
 for idx in range(df_.shape[0]):
     # Gráficas
@@ -124,8 +124,7 @@ ax = fig.add_subplot()
 ax.barh(
     y=analytics
     ,width=[4,4,5,5,4,3,2]
-    ,color='green'
-    ,alpha=0.5)
+    ,color=settings.config['images']['colors']['green'])
 
 ax.set_title('Advanced Analytics', fontsize=18)
 ax.set_xticks(
@@ -146,7 +145,7 @@ ax.barh(
     y=devs
     ,width=[1,4,2,5]
     ,color='red'
-    ,alpha=0.5)
+    ,alpha=0.4)
 
 ax.set_title('Development', fontsize=18)
 ax.set_xticks(
@@ -166,8 +165,7 @@ ax = fig.add_subplot()
 ax.barh(
     y=bi
     ,width=[5,3,2,5]
-    ,color='blue'
-    ,alpha=0.5)
+    ,color=settings.config['images']['colors']['blue'])
 
 ax.set_title('Business Inteligence', fontsize=18)
 ax.set_xticks(
@@ -187,8 +185,7 @@ ax = fig.add_subplot()
 ax.barh(
     y=storage
     ,width=[4,4,3,1]
-    ,color='purple'
-    ,alpha=0.5)
+    ,color=settings.config['images']['colors']['pink'])
 
 ax.set_title('Data Processing & Storage', fontsize=18)
 ax.set_xticks(
