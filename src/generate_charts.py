@@ -95,6 +95,7 @@ ax.set_yticks(
 
 ax.grid(axis='y', alpha=0.25)
 ax.spines['top'].set_visible(False)
+ax.spines['bottom'].set_visible(False)
 ax.spines['right'].set_visible(False)
 ax.spines['left'].set_visible(False)
 
@@ -132,6 +133,7 @@ ax.set_xticks(
     ,labels=list(skill_level.values()))
 ax.set_xlim(right=max(skill_level.keys()))
 ax.spines['top'].set_visible(False)
+ax.spines['bottom'].set_visible(False)
 ax.spines['right'].set_visible(False)
 ax.spines['left'].set_visible(False)
 
@@ -153,6 +155,7 @@ ax.set_xticks(
     ,labels=list(skill_level.values()))
 ax.set_xlim(right=max(skill_level.keys()))
 ax.spines['top'].set_visible(False)
+ax.spines['bottom'].set_visible(False)
 ax.spines['right'].set_visible(False)
 ax.spines['left'].set_visible(False)
 
@@ -173,6 +176,7 @@ ax.set_xticks(
     ,labels=list(skill_level.values()))
 ax.set_xlim(right=max(skill_level.keys()))
 ax.spines['top'].set_visible(False)
+ax.spines['bottom'].set_visible(False)
 ax.spines['right'].set_visible(False)
 ax.spines['left'].set_visible(False)
 
@@ -193,6 +197,7 @@ ax.set_xticks(
     ,labels=list(skill_level.values()))
 ax.set_xlim(right=max(skill_level.keys()))
 ax.spines['top'].set_visible(False)
+ax.spines['bottom'].set_visible(False)
 ax.spines['right'].set_visible(False)
 ax.spines['left'].set_visible(False)
 
