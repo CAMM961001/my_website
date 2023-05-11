@@ -64,7 +64,7 @@ elif selected == settings.config['styling']['pages'][1]:
 
     st.title(pages_.page_title)
 
-    st.markdown(pages_.descripcion)
+    pages_.first_row()
         
     st.markdown('---')
 
