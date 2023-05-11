@@ -4,10 +4,10 @@ main:
   project_name: my_website
   steps: all
 styling:
-  page_title: "MiguelCastaneda"
+  page_title: "Miguel Castaneda"
   layout: "wide"
   pages: ['About Me','Portfolio']
-  menu_icons: ['house', 'book', 'folder2-open', 'envelope']
+  menu_icons: ['house', 'folder2-open']
   fontsize: [20]
 path:
   db_conn: "db-credentials.json"
