@@ -20,3 +20,4 @@ styling:
 path:
   resume: "docs/resume.pdf"
   profile: "images/profile.png"
+  timeline: "docs/timeline.json"
