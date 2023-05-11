@@ -20,7 +20,6 @@ styling:
 path:
   resume: "docs/resume.pdf"
   timeline: "docs/timeline.json"
-  
 
 images:
   profile: "images/profile.png"
@@ -29,3 +28,7 @@ images:
   development: "images/development.png"
   bi: "images/bi.png"
   cloud: "images/cloud.png"
+  colors:
+    blue: "#8acade"
+    green: "#d3ffce"
+    pink: "#eebbff"
