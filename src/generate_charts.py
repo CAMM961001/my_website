@@ -44,7 +44,7 @@ covid_x = pd.to_datetime('20/03/2020', format='%d/%m/%Y')
 # Covid pandemics reference line
 ax.axvline(
     x=covid_x
-    ,color='red'
+    ,color=settings.config['images']['colors']['orange']
     ,alpha=0.4)
 
 # Covid pandemics annotation
@@ -57,7 +57,7 @@ ax.text(
 # Today reference line
 ax.axvline(
     x=today
-    ,color='red'
+    ,color=settings.config['images']['colors']['orange']
     ,alpha=0.4)
 
 # Today annotation
@@ -146,8 +146,7 @@ ax = fig.add_subplot()
 ax.barh(
     y=devs
     ,width=[1,4,2,5]
-    ,color='red'
-    ,alpha=0.4)
+    ,color=settings.config['images']['colors']['orange'])
 
 ax.set_title('Development', fontsize=18)
 ax.set_xticks(
