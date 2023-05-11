@@ -48,7 +48,11 @@ if selected == settings.config['styling']['pages'][0]:
 
     st.title(pages_.page_title)
 
-    st.write(pages_.descripcion, unsafe_allow_html=True)
+    st.write(pages_.description[0], unsafe_allow_html=True)
+
+    pages_.timeline()
+
+    pages_.skills()
         
     st.markdown('---')
 
