@@ -11,7 +11,7 @@ class SideBar:
     def __init__(self):
         """Initialize sidebar static elements"""
         self.resume = settings.config['path']['resume']
-        self.profile = Image.open(settings.config['path']['profile'])
+        self.profile = Image.open(settings.config['images']['profile'])
 
 
     def profile_picture(self):
