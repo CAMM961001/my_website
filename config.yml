@@ -3,8 +3,11 @@ main:
   streamlit: "https://streamlit.io/"
   project_name: my_website
   steps: all
+social_media:
+  github: "https://github.com/CAMM961001"
+  linkedin: "https://www.linkedin.com/in/miguel-angel-castaneda-martinez-b0a566142/"
 styling:
-  page_title: "Miguel Castaneda"
+  page_title: "Miguel Castañeda Martínez"
   layout: "wide"
   pages: ['About Me','Portfolio']
   menu_icons: ['house', 'folder2-open']
