@@ -27,8 +27,8 @@ class Settings():
         documentation
         '''
 
-        # HTML footer string to render
-        footer = f'''
+        # HTML string to render
+        content_str_ = f'''
         <p style="text-align: center; font-size: 15px">
             <br>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
@@ -45,4 +45,4 @@ class Settings():
         </p>'''
 
         # Render footer str
-        markdown(footer, unsafe_allow_html=True)
+        markdown(content_str_, unsafe_allow_html=True)
