@@ -1,7 +1,3 @@
-'''
-Module to store side bar settings and functions
-'''
-
 import streamlit as st
 
 from PIL import Image

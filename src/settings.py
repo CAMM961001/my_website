@@ -4,10 +4,7 @@ import yaml
 from streamlit import markdown
 
 
-class Settings():
-    """A class to store all project settings for Personal Website"""
-    
-    
+class Settings:
     def __init__(self):
         """Initialize the app's static settings"""
         # Relative path to directory root
