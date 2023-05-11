@@ -19,5 +19,13 @@ styling:
 
 path:
   resume: "docs/resume.pdf"
-  profile: "images/profile.png"
   timeline: "docs/timeline.json"
+  
+
+images:
+  profile: "images/profile.png"
+  timeline: "images/timeline.png"
+  analytics: "images/analytics.png"
+  development: "images/development.png"
+  bi: "images/bi.png"
+  cloud: "images/cloud.png"
