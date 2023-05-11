@@ -6,7 +6,7 @@ import settings as setts
 from matplotlib import rcParams
 
 # Figure text color specs
-COLOR = 'white'
+COLOR = 'black'
 rcParams['text.color'] = COLOR
 rcParams['axes.labelcolor'] = COLOR
 rcParams['xtick.color'] = COLOR
