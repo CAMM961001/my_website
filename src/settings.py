@@ -1,6 +1,7 @@
 '''
-Module to store project settings class and utils functions
+Module to store project settings class
 '''
+
 import os
 import yaml
 
