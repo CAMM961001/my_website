@@ -4,6 +4,7 @@ Module to store side bar settings and functions
 
 import streamlit as st
 
+from PIL import Image
 from .settings import Settings
 
 
@@ -12,25 +13,48 @@ settings = Settings()
 
 class SideBar:
     def __init__(self):
-        self.descripcion = 'Hola'
+        """Initialize sidebar static elements"""
+        self.resume = settings.config['path']['resume']
+        self.profile = Image.open(settings.config['path']['profile'])
+
+
+    def profile_picture(self):
+        """Function to render profile picture"""
+        st.image(self.profile)
 
 
     def download_resume(self):
-        
-        with open(settings.config['path']['resume'], 'rb') as file_:
+        """Function to download professional resume"""
+
+        # Open resume file declared in config.yml
+        with open(self.resume, 'rb') as file_:
+            # Read file
             resume = file_.read()
+
+            # Render download button
             st.download_button(
                 label='Download Resume'
                 ,data=resume
                 ,file_name='resume.pdf'
                 ,mime='application/octet-stream'
-                ,use_container_width=False
-                )
+                ,use_container_width=False)
             
+        # Close file
         file_.close()
 
 
     def social_media_buttons(self, align='center'):
+        """
+        Function to render social media declared in
+        config.yml file
+
+        parameters:
+        - align: default 'center', to indicate buttons
+            alignment in container. View HTML alignment
+            options for further information. 
+        """
+
+        # HTML string to render
         content_str_ = f"""
         <div style="text-align: {align}">
             <p>
@@ -56,6 +80,7 @@ class SideBar:
                     </button>
                 </a>
             </p>
-        </div>
-        """
+        </div>"""
+        
+        # Render button str
         st.markdown(content_str_, unsafe_allow_html=True)
