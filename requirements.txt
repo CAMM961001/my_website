@@ -1,0 +1,9 @@
+numpy
+pandas
+matplotlib
+pyyaml
+Pillow
+requests
+streamlit
+streamlit_lottie
+streamlit_option_menu
