@@ -10,25 +10,60 @@ settings = Settings()
 
 class AboutMe:
     def __init__(self):
-        self.page_title = 'About Me'
+        self.page_title = ':wave: About Me'
         self.today = pd.Timestamp.today().date()
+        # Site URL to other pages
+        self.ITAM = '<a href="https://mcdatos.itam.mx/es" style="color: #F63366; text-decoration:none;">ITAM</a>'
+        self.INAI = '<a href="https://home.inai.org.mx/" style="color: #F63366; text-decoration:none;">INAI</a>'
+        self.CDAS = '<a href="https://www.facebook.com/dataalgosocitam/" style="color: #F63366; text-decoration:none;">CDAS</a>'
+        self.PROSS  = '<a href="https://ppross.mx/" style="color: #F63366; text-decoration:none;">Procesos PROSS</a>'
+        self.BILSTEIN =  '<a href="https://bilstein.com/en-us/about-us/" style="color: #F63366; text-decoration:none;">Bilstein Shock Absorbers</a>'
+        self.FSAE = '<a href="https://www.fsaeonline.com/" style="color: #F63366; text-decoration:none;">FSAE</a>'
+        self.UNAM = '<a href="http://www.fi-a.unam.mx/" style="color: #F63366; text-decoration:none;">UNAM School of Engineering</a>'
+        self.UNAMMS = '<a href="https://unam.pro/" style="color: #F63366; text-decoration:none;">UNAM Motorsports</a>'
+
+        # Site content
         self.description = [
-        """
-        <p style="text-align: justify; font-size: {settings.fontsize}px">
+        f"""
+        <p style="text-align: justify;">
             <br>
-            I am a data scientist experienced in manufacturing processes, and 
+            First of all, thank you for taking the time to visit my personal website,
+            here you'll be able to get to know me a bit more, about my background, 
+            and some of my personal projects which, for obvious reasons, are based 
+            on open data sources and technology. That being said, this site is not 
+            intended to be just another boring resume (or JABR as a like to call it),
+            though I am kind enough to leave you a really pretty button in the left sidebar 
+            to download it if that's what your're looking for.
+            </br>
+            <br>
+            Moving on, I'm a Data Scientist experienced in manufacturing processes, and 
             automation of financial services back-end processes. My specialization 
             covers end-to-end data analytics solutions, from data engineering to 
-            Business Intelligence. I am interested on professional challenges 
-            involving Machine Learning and Statistical Modeling to leverage 
-            data-driven decisions.
+            Business Intelligence. I'm interested on professional challenges involving 
+            Machine Learning and Statistical Modeling to leverage data-driven decisions.
             </br>
-        </p>""",
-        """
-        <p style="text-align: justify; font-size: {settings.fontsize}px">
             <br>
-            Description
+            I'm currently studying a full time MSc. in Data Science at {self.ITAM}, 
+            where I additionally volunteer as Data Scientist with {self.INAI} (Mexico's 
+            National Institute for Information Accessibility) through {self.CDAS}, 
+            which is ITAM's extracurricular organization responsible for tackling diverse 
+            social topics powered by data analytics.
             </br>
+            <br>
+            Prior to this, I worked at {self.PROSS} initially as Compliance Analyst and 
+            then as Project Manager for a year and a half. Before that, I perfomed an 
+            engineering role with the Manufacturing Proces Plann Team at {self.BILSTEIN}. 
+            In addition, during my Bachelor in Mechanical Engineering at {self.UNAM}, I 
+            participated during four years in the {self.FSAE} design series with {self.UNAMMS}, 
+            which is a really cool project and I strongly encourage you to visit it.
+            </br>
+            <br>
+            Anyway, if you're more of a visual person that's no problem, here's a nice 
+            visual that sinthesizes my professional trajectory...
+            </br>
+        </p>"""
+        ,"""
+        <p style="text-align: justify">
         </p>
         """,
         """
@@ -44,7 +79,7 @@ class AboutMe:
 
     def timeline(self):
         # Section header
-        st.header('Timeline')
+        st.header(':mantelpiece_clock: Timeline')
 
         # Section description
         st.write(self.description[1], unsafe_allow_html=True)
@@ -58,7 +93,7 @@ class AboutMe:
 
     def skills(self):
         # Section header
-        st.header('Technology Stack')
+        st.header(':space_invader: Technology Stack')
 
         # Section description
         st.write(self.description[2], unsafe_allow_html=True)

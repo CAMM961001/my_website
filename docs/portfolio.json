@@ -8,8 +8,9 @@
             "cover": "images/bayesian_approach.png",
             "description":
             [
-                "I this brief essay I try to show the differences between a frequentist approach and a bayesian one in ",
-                "statistics, with an applied example."
+                "Statistics are really cool! I didn't know that until I started my Master's program. ",
+                "In this brief blog I try to show the differences between a frequentist approach ",
+                "and a bayesian one, with an applied example."
             ],
             "contributors":"Miguel Castañeda"
         }

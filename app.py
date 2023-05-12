@@ -24,7 +24,7 @@ with st.sidebar:
     sb_ = SideBar()
     
     # Side bar title
-    st.title(settings.config['styling']['page_title'])
+    st.title(':sunglasses: '+settings.config['styling']['page_title'])
 
     sb_.download_resume()
 
