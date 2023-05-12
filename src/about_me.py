@@ -59,7 +59,7 @@ class AboutMe:
             </br>
             <br>
             Anyway, if you're more of a visual person that's no problem, here's a nice 
-            visual that sinthesizes my professional trajectory...
+            visual that synthesizes my professional trajectory...
             </br>
         </p>"""
         ,"""
