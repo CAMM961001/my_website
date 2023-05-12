@@ -33,7 +33,7 @@ class AboutMe:
             on open data sources and technology. That being said, this site is not 
             intended to be just another boring resume (or JABR as a like to call it),
             though I am kind enough to leave you a really pretty button in the left sidebar 
-            to download it if that's what your're looking for.
+            to download it if that's what you're looking for.
             </br>
             <br>
             Moving on, I'm a Data Scientist experienced in manufacturing processes, and 
