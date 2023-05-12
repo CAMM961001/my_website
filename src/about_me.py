@@ -93,7 +93,8 @@ class AboutMe:
         jpg_dir = os.path.join(settings.ROOT, 'images/pictures')
 
         # Load images
-        for jpg_file in os.listdir(jpg_dir):
+        for idx in reversed(range(len(os.listdir(jpg_dir)))):
+            jpg_file = f'{idx+1}.jpg'
             fig_ = Image.open(
                 os.path.join(jpg_dir, jpg_file))
             
