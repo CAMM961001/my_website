@@ -46,12 +46,22 @@ if selected == settings.config['styling']['pages'][0]:
     
     pages_ = AboutMe()
 
-    st.title(pages_.page_title)
+    # Page title
+    st.title(':wave: About Me')
+    # Section content
+    col1, col2 = st.columns((3,1))
+    with col1:
+        st.write(pages_.description[0], unsafe_allow_html=True)
+    
+    with col2:
+        pages_.side_images()
 
-    st.write(pages_.description[0], unsafe_allow_html=True)
-
+    # Section header
+    st.header(':mantelpiece_clock: Timeline')
     pages_.timeline()
 
+    # Section header
+    st.header(':space_invader: Technology Stack')
     pages_.skills()
         
     st.markdown('---')

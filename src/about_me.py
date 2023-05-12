@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import streamlit as st
 
@@ -10,7 +11,6 @@ settings = Settings()
 
 class AboutMe:
     def __init__(self):
-        self.page_title = ':wave: About Me'
         self.today = pd.Timestamp.today().date()
         # Site URL to other pages
         self.ITAM = '<a href="https://mcdatos.itam.mx/es" style="color: #F63366; text-decoration:none;">ITAM</a>'
@@ -78,9 +78,6 @@ class AboutMe:
     
 
     def timeline(self):
-        # Section header
-        st.header(':mantelpiece_clock: Timeline')
-
         # Section description
         st.write(self.description[1], unsafe_allow_html=True)
 
@@ -90,11 +87,19 @@ class AboutMe:
         # Render image
         st.image(fig_)
 
+    
+    def side_images(self):
+        # Path to pictures directory
+        jpg_dir = os.path.join(settings.ROOT, 'images/pictures')
+
+        # Load images
+        for jpg_file in os.listdir(jpg_dir):
+            fig_ = Image.open(
+                os.path.join(jpg_dir, jpg_file))
+            
+            st.image(fig_)
 
     def skills(self):
-        # Section header
-        st.header(':space_invader: Technology Stack')
-
         # Section description
         st.write(self.description[2], unsafe_allow_html=True)
         
