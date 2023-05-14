@@ -92,6 +92,15 @@ class AboutMe:
         # Path to pictures directory
         jpg_dir = os.path.join(settings.ROOT, 'images/pictures')
 
+        # Caption of the images
+        caption = [
+            'Formula ATA Italy, 2017'
+            ,'Formula SAE Lincoln 2018'
+            ,'UM10 vehicle rollout event, 2019'
+            ,'Bilstein MP Process team'
+            ,'ITAM CDAS projects presentation'
+        ]
+
         # Load images
         for idx in reversed(range(len(os.listdir(jpg_dir)))):
             jpg_file = f'{idx+1}.jpg'
@@ -99,6 +108,7 @@ class AboutMe:
                 os.path.join(jpg_dir, jpg_file))
             
             st.image(fig_)
+            st.caption(caption[idx])
 
     def skills(self):
         # Section description

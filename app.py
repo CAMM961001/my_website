@@ -52,13 +52,13 @@ if selected == settings.config['styling']['pages'][0]:
     col1, col2 = st.columns((3,1))
     with col1:
         st.write(pages_.description[0], unsafe_allow_html=True)
+        
+        # Section header
+        st.header(':mantelpiece_clock: Timeline')
+        pages_.timeline()
     
     with col2:
         pages_.side_images()
-
-    # Section header
-    st.header(':mantelpiece_clock: Timeline')
-    pages_.timeline()
 
     # Section header
     st.header(':space_invader: Technology Stack')
