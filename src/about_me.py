@@ -95,10 +95,10 @@ class AboutMe:
         # Caption of the images
         caption = [
             'Formula ATA Italy, 2017'
-            ,'Formula SAE Lincoln 2018'
-            ,'UM10 vehicle rollout event, 2019'
-            ,'Bilstein MP Process team'
-            ,'ITAM CDAS projects presentation'
+            ,'Formula SAE Lincoln, 2018'
+            ,'UM10 Vehicle Rollout Event, 2019'
+            ,'Bilstein MPP Process Team'
+            ,'ITAM CDAS Projects Presentation'
         ]
 
         # Load images
