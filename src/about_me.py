@@ -52,7 +52,7 @@ class AboutMe:
             <br>
             Prior to this, I worked at {self.PROSS} initially as Compliance Analyst and 
             then as Project Manager for a year and a half. Before that, I perfomed an 
-            engineering role with the Manufacturing Proces Plann Team at {self.BILSTEIN}. 
+            engineering role with the Manufacturing Process Plan Team at {self.BILSTEIN}. 
             In addition, during my Bachelor in Mechanical Engineering at {self.UNAM}, I 
             participated during four years in the {self.FSAE} design series with {self.UNAMMS}, 
             which is a really cool project and I strongly encourage you to visit it.
