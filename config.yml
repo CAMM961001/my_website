@@ -13,7 +13,7 @@ social_media:
 styling:
   page_title: "Miguel Castañeda"
   layout: "wide"
-  pages: ["About Me","Portfolio"]
+  pages: ["Portfolio","About Me"]
   menu_icons: ["house", "folder2-open"]
 
 path:

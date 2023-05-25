@@ -44,6 +44,17 @@ with st.sidebar:
 # --- PAGES: About Me ---
 if selected == settings.config['styling']['pages'][0]:
     
+    pages_ = Portfolio()
+
+    st.title(pages_.page_title)
+
+    pages_.first_row()
+        
+    st.markdown('---')
+    
+
+elif selected == settings.config['styling']['pages'][1]:
+    
     pages_ = AboutMe()
 
     # Page title
@@ -54,29 +65,11 @@ if selected == settings.config['styling']['pages'][0]:
         st.write(pages_.description[0], unsafe_allow_html=True)
         
         # Section header
-        st.header(':mantelpiece_clock: Timeline')
+        st.header(':mantelpiece_clock: My resumen in a timeline')
         pages_.timeline()
     
     with col2:
         pages_.side_images()
-
-    # Section header
-    st.header(':space_invader: Technology Stack')
-    pages_.skills()
-        
-    st.markdown('---')
-
-
-# --- PAGES: Project portfolio ---
-elif selected == settings.config['styling']['pages'][1]:
-    
-    pages_ = Portfolio()
-
-    st.title(pages_.page_title)
-
-    pages_.first_row()
-        
-    st.markdown('---')
 
 
 if __name__ == '__main__':
