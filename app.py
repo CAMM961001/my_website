@@ -49,8 +49,6 @@ with st.sidebar:
     
     sb_.profile_picture()
 
-    sb_.social_media_buttons()
-
 
 # -------------------------------------------------------------- PORTFOLIO
 
