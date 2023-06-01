@@ -1,18 +1,10 @@
-{
-    "projects":
-    [
-        {
-            "project_name":"A Bayesian Approach",
-            "site_url":"https://camm961001.quarto.pub/un-enfoque-bayesiano/",
-            "source_url":"https://github.com/CAMM961001/bayes-first-steps",
-            "cover": "images/bayesian_approach.png",
-            "description":
-            [
-                "Statistics are really cool! I didn't know that until I started my Master's program. ",
-                "In this brief blog I try to show the differences between a frequentist approach ",
-                "and a bayesian one, with an applied example."
-            ],
-            "contributors":"Miguel Castañeda"
-        }
-    ]
-}
+[
+    {
+        "name":"A Bayesian Approach"
+        ,"site_url":"https://camm961001.quarto.pub/un-enfoque-bayesiano/"
+        ,"src_url":"https://github.com/CAMM961001/bayes-first-steps"
+        ,"cover": "images/bayesian_approach.png"
+        ,"description":"Statistics are really cool! I didn't know that until I started my Master's program. In this brief blog I try to show the differences between a frequentist approach and a bayesian one, with an applied example."
+        ,"contributors":["Miguel Castañeda"]
+    }
+]
