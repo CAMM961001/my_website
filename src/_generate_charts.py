@@ -137,7 +137,7 @@ ax.spines['bottom'].set_visible(False)
 ax.spines['right'].set_visible(False)
 ax.spines['left'].set_visible(False)
 
-fig.savefig('images/analytics.png', transparent=True, bbox_inches = 'tight')
+#fig.savefig('images/analytics.png', transparent=True, bbox_inches = 'tight')
 
 # Development
 fig = plt.figure()
@@ -158,7 +158,7 @@ ax.spines['bottom'].set_visible(False)
 ax.spines['right'].set_visible(False)
 ax.spines['left'].set_visible(False)
 
-fig.savefig('images/development.png', transparent=True, bbox_inches = 'tight')
+#fig.savefig('images/development.png', transparent=True, bbox_inches = 'tight')
 
 # Business Inteligence
 fig = plt.figure()
@@ -179,7 +179,7 @@ ax.spines['bottom'].set_visible(False)
 ax.spines['right'].set_visible(False)
 ax.spines['left'].set_visible(False)
 
-fig.savefig('images/bi.png', transparent=True, bbox_inches = 'tight')
+#fig.savefig('images/bi.png', transparent=True, bbox_inches = 'tight')
 
 # Cloud
 fig = plt.figure()
@@ -200,7 +200,7 @@ ax.spines['bottom'].set_visible(False)
 ax.spines['right'].set_visible(False)
 ax.spines['left'].set_visible(False)
 
-fig.savefig('images/cloud.png', transparent=True, bbox_inches = 'tight')
+#fig.savefig('images/cloud.png', transparent=True, bbox_inches = 'tight')
 
 
 if __name__ == '__main__':
