@@ -13,7 +13,7 @@ def local_css(file_name):
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 
-def render_button(url, name='View site', align='center'):
+def render_button(url, name='Visit site', align='center'):
     button = f"""
             <div style="text-align: {align}"><p></p>
                 <a href="{url}">

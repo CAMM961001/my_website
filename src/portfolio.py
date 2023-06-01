@@ -40,4 +40,4 @@ class Portfolio:
 
         # Project navigation buttons
         render_button(url=site_url)
-        render_button(url=src_url, name='View source')
+        render_button(url=src_url, name='Source')
