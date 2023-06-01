@@ -13,32 +13,31 @@ class Portfolio:
     def __init__(self):
         self.page_title = 'Portfolio'
         with open(settings.config['path']['portfolio']) as file_:
-            self.data = json.load(file_)['projects']
+            self.data = json.load(file_)
         file_.close()
 
 
-    def first_row(self):
-        with st.container():
-            col1, col2, col3= st.columns(3, gap='large')
+    def render_project(
+            self
+            ,name: str
+            ,contrib: list
+            ,desc: str
+            ,img_path: str
+            ,site_url: str
+            ,src_url: str):
+        
+        # Project header and cortibutors
+        st.subheader(name)
+        st.caption(', '.join(contrib))
 
-            with col1:
-                # Project header and cortibutors
-                st.subheader(self.data[0]['project_name'])
-                st.caption(self.data[0]['contributors'])
-                
-                # Project cover image
-                cover = Image.open(self.data[0]['cover'])
-                st.image(cover)
+        # Project cover image
+        cover = Image.open(img_path)
+        st.image(cover)
 
-                # Project description content
-                description = ""
-                for line in self.data[0]['description']:
-                    description += line
-                description = f'''<p style="text-align: justify">{description}</p>'''
+        # Project description
+        desc = f'''<p style="text-align: justify">{desc}</p>'''
+        st.write(desc, unsafe_allow_html=True)
 
-                # Render description
-                st.write(description, unsafe_allow_html=True)
-
-                # Project navigation buttons
-                render_button(url=self.data[0]['site_url'])
-                render_button(url=self.data[0]['source_url'], name='View source')
+        # Project navigation buttons
+        render_button(url=site_url)
+        render_button(url=src_url, name='View source')

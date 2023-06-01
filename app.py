@@ -48,7 +48,18 @@ if selected == settings.config['styling']['pages'][0]:
 
     st.title(pages_.page_title)
 
-    pages_.first_row()
+    with st.container():
+        col1, col2, col3 = st.columns(3, gap='large')
+        
+        with col1:
+            proj = 0
+            pages_.render_project(
+                name=pages_.data[proj]['name']
+                ,contrib=pages_.data[proj]['contributors']
+                ,desc=pages_.data[proj]['description']
+                ,img_path=pages_.data[proj]['cover']
+                ,site_url=pages_.data[proj]['site_url']
+                ,src_url=pages_.data[proj]['src_url'])
         
     st.markdown('---')
     
