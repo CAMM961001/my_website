@@ -12,7 +12,7 @@
         ,"site_url":"https://www.youtube.com/playlist?list=PL-AtWs1t1KG-lyKuJvnBxMserESOYe10I"
         ,"src_url":"https://github.com/CAMM961001/my_website"
         ,"cover": "images/youtube_portfolio.png"
-        ,"description":"I strongly believe the best way to consolidate knowledge is by sharing it. In this YouTube tutorial series I describe the Python and Streamlit code template I designed to build this project portfolio website."
+        ,"description":"I strongly believe the best way to consolidate knowledge is by sharing it. In this YouTube tutorial series I describe the Python and Streamlit code template I designed to build this website."
         ,"contributors":["Miguel Castañeda"]
     }
 ]
