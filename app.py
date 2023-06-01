@@ -13,20 +13,21 @@ settings = Settings()
 
 # Site settings
 st.set_page_config(
-    page_title=settings.config['styling']['page_title'],
-    layout=settings.config['styling']['layout'])
+    page_title = settings.config['styling']['page_title'],
+    layout = settings.config['styling']['layout'])
 
-# --- SIDE BAR ---
+
+# --------------------------------------------------------------- SIDE BAR
 
 # Side bar fixed width
 st.markdown(
-    body='''
+    body = '''
     <style>
         [data-testid="stSidebar"][aria-expanded="true"]{
             min-width: 325px;
             max-width: 325px;
         }'''
-    ,unsafe_allow_html=True
+    ,unsafe_allow_html = True
 )
 
 with st.sidebar:
@@ -34,29 +35,33 @@ with st.sidebar:
     sb_ = SideBar()
     
     # Side bar title
-    st.title(':sunglasses: '+settings.config['styling']['page_title'])
+    st.title(':sunglasses: ' + settings.config['styling']['page_title'])
 
     sb_.download_resume()
 
     # Navigation menu
     selected = option_menu(
-        menu_title=None,
-        options=settings.config['styling']['pages'],
-        icons=settings.config['styling']['menu_icons'],
-        menu_icon='cast',
-        default_index=0)
+        menu_title = None,
+        options = settings.config['styling']['pages'],
+        icons = settings.config['styling']['menu_icons'],
+        menu_icon = 'cast',
+        default_index = 0)
     
     sb_.profile_picture()
 
     sb_.social_media_buttons()
 
 
-# --- PAGES: About Me ---
+# -------------------------------------------------------------- PORTFOLIO
+
+
 if selected == settings.config['styling']['pages'][0]:
     
     pages_ = Portfolio()
 
     st.title(pages_.page_title)
+
+    st.markdown('---')
 
     with st.container():
         col1, col2, col3 = st.columns(3, gap='large')
@@ -64,25 +69,28 @@ if selected == settings.config['styling']['pages'][0]:
         with col1:
             proj = 0
             pages_.render_project(
-                name=pages_.data[proj]['name']
-                ,contrib=pages_.data[proj]['contributors']
-                ,desc=pages_.data[proj]['description']
-                ,img_path=pages_.data[proj]['cover']
-                ,site_url=pages_.data[proj]['site_url']
-                ,src_url=pages_.data[proj]['src_url'])
+                name = pages_.data[proj]['name']
+                ,contrib = pages_.data[proj]['contributors']
+                ,desc = pages_.data[proj]['description']
+                ,img_path = pages_.data[proj]['cover']
+                ,site_url = pages_.data[proj]['site_url']
+                ,src_url = pages_.data[proj]['src_url'])
         
         with col2:
             proj = 1
             pages_.render_project(
-                name=pages_.data[proj]['name']
-                ,contrib=pages_.data[proj]['contributors']
-                ,desc=pages_.data[proj]['description']
-                ,img_path=pages_.data[proj]['cover']
-                ,site_url=pages_.data[proj]['site_url']
-                ,src_url=pages_.data[proj]['src_url'])
+                name = pages_.data[proj]['name']
+                ,contrib = pages_.data[proj]['contributors']
+                ,desc = pages_.data[proj]['description']
+                ,img_path = pages_.data[proj]['cover']
+                ,site_url = pages_.data[proj]['site_url']
+                ,src_url = pages_.data[proj]['src_url'])
             
     st.markdown('---')
     
+
+# --------------------------------------------------------------- ABOUT ME
+
 
 elif selected == settings.config['styling']['pages'][1]:
     
@@ -93,7 +101,7 @@ elif selected == settings.config['styling']['pages'][1]:
     # Section content
     col1, col2 = st.columns((3,1))
     with col1:
-        st.write(pages_.description[0], unsafe_allow_html=True)
+        st.write(pages_.description[0], unsafe_allow_html = True)
         
         # Section header
         st.header(':mantelpiece_clock: My resumen in a timeline')
