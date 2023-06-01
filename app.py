@@ -16,10 +16,20 @@ st.set_page_config(
     page_title=settings.config['styling']['page_title'],
     layout=settings.config['styling']['layout'])
 
-
 # --- SIDE BAR ---
+
+# Side bar fixed width
+st.markdown(
+    body='''
+    <style>
+        [data-testid="stSidebar"][aria-expanded="true"]{
+            min-width: 325px;
+            max-width: 325px;
+        }'''
+    ,unsafe_allow_html=True
+)
+
 with st.sidebar:
-    
     # Initialize sidebar instance
     sb_ = SideBar()
     
