@@ -61,6 +61,16 @@ if selected == settings.config['styling']['pages'][0]:
                 ,site_url=pages_.data[proj]['site_url']
                 ,src_url=pages_.data[proj]['src_url'])
         
+        with col2:
+            proj = 1
+            pages_.render_project(
+                name=pages_.data[proj]['name']
+                ,contrib=pages_.data[proj]['contributors']
+                ,desc=pages_.data[proj]['description']
+                ,img_path=pages_.data[proj]['cover']
+                ,site_url=pages_.data[proj]['site_url']
+                ,src_url=pages_.data[proj]['src_url'])
+            
     st.markdown('---')
     
 
