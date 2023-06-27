@@ -13,8 +13,9 @@ settings = Settings()
 
 # Site settings
 st.set_page_config(
-    page_title = settings.config['styling']['page_title'],
-    layout = settings.config['styling']['layout'])
+    page_title = settings.config['styling']['page_title']
+    ,layout = settings.config['styling']['layout']
+    ,initial_sidebar_state='expanded')
 
 
 # --------------------------------------------------------------- SIDE BAR
