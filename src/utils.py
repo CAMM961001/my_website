@@ -14,13 +14,16 @@ def local_css(file_name):
 
 
 def render_button(url, name='Visit site', align='center'):
-    button = f"""
-            <div style="text-align: {align}"><p></p>
-                <a href="{url}">
-                    <button type="button" class="btn btn-outline-danger">
-                        {name}
-                    </button>
-                </a>
+    button = f'''
+        <a href="{url}" target="_self" style="text-decoration: none;">
+            <div style="
+                text-align: {align};
+                padding: 0.5em 1em;
+                color: #FFFFFF;
+                background-color: #F63366;
+                border-radius: 10px;">
+                {name}
             </div>
-            """
+        </a>
+        '''
     st.markdown(button, unsafe_allow_html=True)
