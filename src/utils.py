@@ -15,7 +15,7 @@ def local_css(file_name):
 
 def render_button(url, name='Visit site', align='center'):
     button = f'''
-        <a href="{url}" target="_self" style="text-decoration: none;">
+        <a href="{url}" style="text-decoration: none;">
             <div style="
                 text-align: {align};
                 padding: 0.5em 1em;
