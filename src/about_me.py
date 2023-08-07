@@ -26,7 +26,6 @@ class AboutMe:
         self.description = [
         f"""
         <p style="text-align: justify;">
-            <br>
             First of all, thank you for taking the time to visit my personal website,
             here you'll be able to get to know me a bit more, about my background, 
             and some of my personal projects which, for obvious reasons, are based 
