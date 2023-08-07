@@ -40,4 +40,5 @@ class Portfolio:
 
         # Project navigation buttons
         render_button(url=site_url)
+        st.write('')
         render_button(url=src_url, name='Source')
