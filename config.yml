@@ -25,10 +25,6 @@ path:
 images:
   profile: "images/profile.png"
   timeline: "images/timeline.png"
-  analytics: "images/analytics.png"
-  development: "images/development.png"
-  bi: "images/bi.png"
-  cloud: "images/cloud.png"
   colors:
     blue: "#8acade"
     green: "#d3ffce"
