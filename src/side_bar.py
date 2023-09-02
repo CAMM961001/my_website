@@ -31,7 +31,7 @@ class SideBar:
             st.download_button(
                 label='Download Resume'
                 ,data=resume
-                ,file_name='resume.pdf'
+                ,file_name='miguel_castaneda.pdf'
                 ,mime='application/octet-stream'
                 ,use_container_width=False)
             

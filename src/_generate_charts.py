@@ -1,9 +1,9 @@
 import json
 import pandas as pd
 import matplotlib.pyplot as plt
-import settings as setts
 
 from matplotlib import rcParams
+from settings import Settings
 
 # Figure text color specs
 COLOR = 'black'
@@ -13,7 +13,7 @@ rcParams['xtick.color'] = COLOR
 rcParams['ytick.color'] = COLOR
 
 # Load project settings
-settings = setts.Settings()
+settings = Settings()
 
 # Get todays date
 today = pd.Timestamp.today().date()
@@ -25,7 +25,6 @@ today = pd.Timestamp.today().date()
 # Open timeline asset file
 with open(settings.config['path']['timeline'], 'r') as file:
     df_ = json.load(file)
-file.close()
 
 # Data preprocess for timeline visualization
 df_ = (
@@ -100,108 +99,6 @@ ax.spines['right'].set_visible(False)
 ax.spines['left'].set_visible(False)
 
 fig.savefig('images/timeline.png', transparent=True, bbox_inches = 'tight')
-
-
-# =======================================================================
-# ============================ TechStack ================================
-# =======================================================================
-
-skill_level = {
-            1:'Recruit'
-            ,2:'Regular'
-            ,3:'Hardened'
-            ,4:'Veteran'
-            ,5:'Legend'}
-
-analytics = ['Numpy','Scipy','Pandas','Matplotlib','ScikitLearn','TensorFlow','Tidyverse']
-devs = ['Flask','SQL Connectors','Docker','Git-GitHub']
-bi = ['Excel','Excel VBA','R Shiny', 'Streamlit']
-storage = ['Postgres','SQLServer','SQLite', 'Bash']
-
-# Advanced analytics
-fig = plt.figure()
-ax = fig.add_subplot()
-
-ax.barh(
-    y=analytics
-    ,width=[4,4,5,5,4,3,2]
-    ,color=settings.config['images']['colors']['green'])
-
-ax.set_title('Advanced Analytics', fontsize=18)
-ax.set_xticks(
-    ticks=list(skill_level.keys())
-    ,labels=list(skill_level.values()))
-ax.set_xlim(right=max(skill_level.keys()))
-ax.spines['top'].set_visible(False)
-ax.spines['bottom'].set_visible(False)
-ax.spines['right'].set_visible(False)
-ax.spines['left'].set_visible(False)
-
-#fig.savefig('images/analytics.png', transparent=True, bbox_inches = 'tight')
-
-# Development
-fig = plt.figure()
-ax = fig.add_subplot()
-
-ax.barh(
-    y=devs
-    ,width=[1,4,2,5]
-    ,color=settings.config['images']['colors']['orange'])
-
-ax.set_title('Development', fontsize=18)
-ax.set_xticks(
-    ticks=list(skill_level.keys())
-    ,labels=list(skill_level.values()))
-ax.set_xlim(right=max(skill_level.keys()))
-ax.spines['top'].set_visible(False)
-ax.spines['bottom'].set_visible(False)
-ax.spines['right'].set_visible(False)
-ax.spines['left'].set_visible(False)
-
-#fig.savefig('images/development.png', transparent=True, bbox_inches = 'tight')
-
-# Business Inteligence
-fig = plt.figure()
-ax = fig.add_subplot()
-
-ax.barh(
-    y=bi
-    ,width=[5,3,2,5]
-    ,color=settings.config['images']['colors']['blue'])
-
-ax.set_title('Business Inteligence', fontsize=18)
-ax.set_xticks(
-    ticks=list(skill_level.keys())
-    ,labels=list(skill_level.values()))
-ax.set_xlim(right=max(skill_level.keys()))
-ax.spines['top'].set_visible(False)
-ax.spines['bottom'].set_visible(False)
-ax.spines['right'].set_visible(False)
-ax.spines['left'].set_visible(False)
-
-#fig.savefig('images/bi.png', transparent=True, bbox_inches = 'tight')
-
-# Cloud
-fig = plt.figure()
-ax = fig.add_subplot()
-
-ax.barh(
-    y=storage
-    ,width=[4,4,3,1]
-    ,color=settings.config['images']['colors']['pink'])
-
-ax.set_title('Data Processing & Storage', fontsize=18)
-ax.set_xticks(
-    ticks=list(skill_level.keys())
-    ,labels=list(skill_level.values()))
-ax.set_xlim(right=max(skill_level.keys()))
-ax.spines['top'].set_visible(False)
-ax.spines['bottom'].set_visible(False)
-ax.spines['right'].set_visible(False)
-ax.spines['left'].set_visible(False)
-
-#fig.savefig('images/cloud.png', transparent=True, bbox_inches = 'tight')
-
 
 if __name__ == '__main__':
     print('Job done')

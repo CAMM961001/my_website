@@ -8,19 +8,19 @@ from .settings import Settings
 
 # Load project settings
 settings = Settings()
-
+{settings.toml_config["theme"]["socialMediaColor"]}
 class AboutMe:
     def __init__(self):
         self.today = pd.Timestamp.today().date()
         # Site URL to other pages
-        self.ITAM = '<a href="https://mcdatos.itam.mx/es" style="color: #F63366; text-decoration:none;">ITAM</a>'
-        self.INAI = '<a href="https://home.inai.org.mx/" style="color: #F63366; text-decoration:none;">INAI</a>'
-        self.CDAS = '<a href="https://www.facebook.com/dataalgosocitam/" style="color: #F63366; text-decoration:none;">CDAS</a>'
-        self.PROSS  = '<a href="https://ppross.mx/" style="color: #F63366; text-decoration:none;">Procesos PROSS</a>'
-        self.BILSTEIN =  '<a href="https://bilstein.com/en-us/about-us/" style="color: #F63366; text-decoration:none;">Bilstein Shock Absorbers</a>'
-        self.FSAE = '<a href="https://www.fsaeonline.com/" style="color: #F63366; text-decoration:none;">FSAE</a>'
-        self.UNAM = '<a href="http://www.fi-a.unam.mx/" style="color: #F63366; text-decoration:none;">UNAM School of Engineering</a>'
-        self.UNAMMS = '<a href="https://unam.pro/" style="color: #F63366; text-decoration:none;">UNAM Motorsports</a>'
+        self.ITAM = f'<a href="https://mcdatos.itam.mx/es" style="color: {settings.toml_config["theme"]["socialMediaColor"]}; text-decoration:none; font-weight:bold">ITAM</a>'
+        self.INAI = f'<a href="https://home.inai.org.mx/" style="color: {settings.toml_config["theme"]["socialMediaColor"]}; text-decoration:none; font-weight:bold">INAI</a>'
+        self.CDAS = f'<a href="https://www.facebook.com/dataalgosocitam/" style="color: {settings.toml_config["theme"]["socialMediaColor"]}; text-decoration:none; font-weight:bold">CDAS</a>'
+        self.PROSS  = f'<a href="https://ppross.mx/" style="color: {settings.toml_config["theme"]["socialMediaColor"]}; text-decoration:none; font-weight:bold">Procesos PROSS</a>'
+        self.BILSTEIN =  f'<a href="https://bilstein.com/en-us/about-us/" style="color: {settings.toml_config["theme"]["socialMediaColor"]}; text-decoration:none; font-weight:bold">Bilstein Shock Absorbers</a>'
+        self.FSAE = f'<a href="https://www.fsaeonline.com/" style="color: {settings.toml_config["theme"]["socialMediaColor"]}; text-decoration:none; font-weight:bold">FSAE</a>'
+        self.UNAM = f'<a href="http://www.fi-a.unam.mx/" style="color: {settings.toml_config["theme"]["socialMediaColor"]}; text-decoration:none; font-weight:bold">UNAM School of Engineering</a>'
+        self.UNAMMS = f'<a href="https://unam.pro/" style="color: {settings.toml_config["theme"]["socialMediaColor"]}; text-decoration:none; ">UNAM Motorsports</a>'
 
         # Site content
         self.description = [
