@@ -1,7 +1,7 @@
 main:
   components_repository: "https://github.com/CAMM961001/my_website"
   streamlit: "https://streamlit.io/"
-  copyright: "Miguel Castaneda 2023"
+  copyright: "Miguel Castañeda 2023"
   project_name: my_website
   steps: all
 
@@ -12,7 +12,7 @@ social_media:
   youtube: "https://www.youtube.com/channel/UCrgbPO8HEhtIlVfXT-DZrSg"
 
 styling:
-  page_title: "Miguel Castaneda"
+  page_title: "Miguel Castañeda"
   layout: "wide"
   pages: ["Portfolio","About Me"]
   menu_icons: ["house", "folder2-open"]
