@@ -1,9 +1,9 @@
 import json
 import pandas as pd
 import matplotlib.pyplot as plt
-import settings as setts
 
 from matplotlib import rcParams
+from settings import Settings
 
 # Figure text color specs
 COLOR = 'black'
@@ -13,7 +13,7 @@ rcParams['xtick.color'] = COLOR
 rcParams['ytick.color'] = COLOR
 
 # Load project settings
-settings = setts.Settings()
+settings = Settings()
 
 # Get todays date
 today = pd.Timestamp.today().date()
