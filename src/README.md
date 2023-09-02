@@ -1,1 +1,0 @@
-Directory to store site source code for modules.
