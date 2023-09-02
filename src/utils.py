@@ -1,5 +1,8 @@
 import requests
 import streamlit as st
+from .settings import Settings
+
+settings = Settings()
 
 def load_lottie_url(url):
     r = requests.get(url)
@@ -20,7 +23,7 @@ def render_button(url, name='Visit site', align='center'):
                 text-align: {align};
                 padding: 0.5em 1em;
                 color: #FFFFFF;
-                background-color: #F63366;
+                background-color: {settings.toml_config['theme']['primaryColor']};
                 border-radius: 10px;">
                 {name}
             </div>
