@@ -3,4 +3,5 @@
 
 # References
 
-* https://icons.getbootstrap.com/
+* [Íconos de Bootstrap](https://icons.getbootstrap.com/)
+* [Generador de fotos de perfil](https://picofme.io/)
