@@ -1,5 +1,6 @@
 import os
 import yaml
+import toml
 
 from streamlit import markdown
 
@@ -13,7 +14,10 @@ class Settings:
         # Open global configuration file
         with open(os.path.join(self.ROOT, 'config.yml'), 'r') as file:
             self.config = yaml.safe_load(file)
-        file.close
+
+        # Open streamlit toml config file
+        self.toml_config = toml.load(
+            f=os.path.join(self.ROOT, '.streamlit/config.toml'))
     
 
     def site_footer(self):
