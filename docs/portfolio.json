@@ -17,4 +17,15 @@
         ,"contributors":[
             {"Miguel Castañeda":"https://camm961001-my-website-app-j02b8x.streamlit.app/"}]
     }
+    ,{
+        "name":"Bicycle Mobility"
+        ,"site_url":"https://datos.nexos.com.mx/un-recorrido-por-el-sistema-de-bicicletas-publicas-de-la-ciudad-de-mexico-ecobici/"
+        ,"src_url":"https://github.com/CAMM961001/movilidad_bicicletas"
+        ,"cover": "images/bycicle_movility.png"
+        ,"description":"In this article for Nexos magazine I get insights from EcoBici, the largest cycling mobility service in CDMX, in three main storylines: Users profile, connectivity with other public transport services, and surrounding security."
+        ,"contributors":[
+            {"Miguel Castañeda":"https://camm961001-my-website-app-j02b8x.streamlit.app/"}
+            ,{"Alberto García":"https://www.linkedin.com/in/luis-alberto-garc%C3%ADa-aguilar-8b3a73b0/"}
+            ,{"Carlos Castro":"https://www.linkedin.com/in/carloscastrocorrea/"}]
+    }
 ]

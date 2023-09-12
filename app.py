@@ -63,9 +63,19 @@ if selected == settings.config['styling']['pages'][0]:
     st.markdown('---')
 
     with st.container():
-        col1, col2, col3 = st.columns(3, gap='large')
+        col1, col2, col3 = st.columns(3, gap='medium')
         
         with col1:
+            proj = 2
+            pages_.render_project(
+                name = pages_.data[proj]['name']
+                ,contrib = pages_.data[proj]['contributors']
+                ,desc = pages_.data[proj]['description']
+                ,img_path = pages_.data[proj]['cover']
+                ,site_url = pages_.data[proj]['site_url']
+                ,src_url = pages_.data[proj]['src_url'])
+
+        with col2:
             proj = 0
             pages_.render_project(
                 name = pages_.data[proj]['name']
@@ -75,7 +85,7 @@ if selected == settings.config['styling']['pages'][0]:
                 ,site_url = pages_.data[proj]['site_url']
                 ,src_url = pages_.data[proj]['src_url'])
         
-        with col2:
+        with col3:
             proj = 1
             pages_.render_project(
                 name = pages_.data[proj]['name']
