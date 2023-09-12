@@ -28,8 +28,8 @@ class Portfolio:
         
         # Project header and cortibutors
         st.subheader(name)
-        contrib = [
-            f'''<a
+        contrib = [f'''
+            <a
             href="{list(cont.values())[0]}"
             style="
                 color: {settings.toml_config["theme"]["socialMediaColor"]};
