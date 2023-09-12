@@ -20,7 +20,7 @@ class AboutMe:
         self.BILSTEIN =  f'<a href="https://bilstein.com/en-us/about-us/" style="color: {settings.toml_config["theme"]["socialMediaColor"]}; text-decoration:none; font-weight:bold">Bilstein Shock Absorbers</a>'
         self.FSAE = f'<a href="https://www.fsaeonline.com/" style="color: {settings.toml_config["theme"]["socialMediaColor"]}; text-decoration:none; font-weight:bold">FSAE</a>'
         self.UNAM = f'<a href="http://www.fi-a.unam.mx/" style="color: {settings.toml_config["theme"]["socialMediaColor"]}; text-decoration:none; font-weight:bold">UNAM School of Engineering</a>'
-        self.UNAMMS = f'<a href="https://unam.pro/" style="color: {settings.toml_config["theme"]["socialMediaColor"]}; text-decoration:none; ">UNAM Motorsports</a>'
+        self.UNAMMS = f'<a href="https://unam.pro/" style="color: {settings.toml_config["theme"]["socialMediaColor"]}; text-decoration:none; font-weight:bold">UNAM Motorsports</a>'
 
         # Site content
         self.description = [
