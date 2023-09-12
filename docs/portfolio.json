@@ -5,7 +5,8 @@
         ,"src_url":"https://github.com/CAMM961001/bayes-first-steps"
         ,"cover": "images/bayesian_approach.png"
         ,"description":"Statistics are really cool! I didn't know that until I started my Master's program. In this brief blog I try to show the differences between a frequentist approach and a bayesian one, with an applied example."
-        ,"contributors":["Miguel Castañeda"]
+        ,"contributors":[
+            {"Miguel Castañeda":"https://camm961001-my-website-app-j02b8x.streamlit.app/"}]
     }
     ,{
         "name":"Portfolio Tutorial"
@@ -13,6 +14,7 @@
         ,"src_url":"https://github.com/CAMM961001/my_website"
         ,"cover": "images/youtube_portfolio.png"
         ,"description":"I strongly believe the best way to consolidate knowledge is by sharing it. In this YouTube tutorial series I describe the Python and Streamlit code template I designed to build this website."
-        ,"contributors":["Miguel Castañeda"]
+        ,"contributors":[
+            {"Miguel Castañeda":"https://camm961001-my-website-app-j02b8x.streamlit.app/"}]
     }
 ]
