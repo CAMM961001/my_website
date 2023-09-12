@@ -93,16 +93,17 @@ class AboutMe:
 
         # Caption of the images
         caption = [
-            'Formula ATA Italy, 2017'
+            'UM46-7 Vehicle Rollout Event, 2016'
+            ,'Formula ATA Italy, 2017'
             ,'Formula SAE Lincoln, 2018'
-            ,'UM10 Vehicle Rollout Event, 2019'
+            ,'UM10 Kickoff Photo Shooting, 2019'
             ,'Bilstein MPP Process Team'
             ,'ITAM CDAS Projects Presentation'
         ]
 
         # Load images
         for idx in reversed(range(len(os.listdir(jpg_dir)))):
-            jpg_file = f'{idx+1}.jpg'
+            jpg_file = f'{idx}.jpg'
             fig_ = Image.open(
                 os.path.join(jpg_dir, jpg_file))
             
