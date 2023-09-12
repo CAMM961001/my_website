@@ -18,7 +18,7 @@
             {"Miguel Castañeda":"https://camm961001-my-website-app-j02b8x.streamlit.app/"}]
     }
     ,{
-        "name":"Bicycle Mobility"
+        "name":"Cycling Mobility"
         ,"site_url":"https://datos.nexos.com.mx/un-recorrido-por-el-sistema-de-bicicletas-publicas-de-la-ciudad-de-mexico-ecobici/"
         ,"src_url":"https://github.com/CAMM961001/movilidad_bicicletas"
         ,"cover": "images/bycicle_movility.png"
