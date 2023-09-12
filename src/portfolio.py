@@ -28,7 +28,15 @@ class Portfolio:
         
         # Project header and cortibutors
         st.subheader(name)
-        st.caption(', '.join(contrib))
+        contrib = [
+            f'''<a
+            href="{list(cont.values())[0]}"
+            style="
+                color: {settings.toml_config["theme"]["socialMediaColor"]};
+                text-decoration:none;
+                font-weight:bold">{list(cont.keys())[0]}</a>'''
+        for cont in contrib]
+        st.caption(body=', '.join(contrib), unsafe_allow_html=True)
 
         # Project cover image
         cover = Image.open(img_path)
