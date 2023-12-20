@@ -66,7 +66,7 @@ class AboutMe:
         fig_ = Image.open(settings.config['images']['timeline'])
 
         # Render image
-        st.image(fig_)
+        st.image(fig_, caption='Build with Python')
 
     
     def side_images(self):
