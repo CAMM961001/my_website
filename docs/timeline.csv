@@ -1,0 +1,14 @@
+nombre,empresa,ypos,delta,inicio,fin,color
+BSc. Mechanical Engineering,"UNAM\nMexico City",1,1,2014-08-01,2019-07-01,#c0e6bc
+"My Data Science\nJournery Begins...","Coursera\nUdemy\nBooks",2,1,2020-04-15,2021-02-01,#c0e6bc
+"Graduate Certificate\nDSc and ML","ITAM\nMexico City",3,-1,2021-08-01,2022-04-01,#c0e6bc
+MSc. Data Science,"ITAM\nMexico City",3,1,2022-08-01,2023-12-01,#c0e6bc
+"Design Engineer Jr","UNAM Motorsports\nMexico City",4,1,2015-07-01,2016-07-01,#8acade
+"Design Engineer Sr","UNAM Motorsports\nMexico City",4,-1,2016-07-01,2017-07-01,#8acade
+"Design Principal","UNAM Motorsports\nMexico City",4,1,2017-07-01,2018-07-01,#8acade
+Team Principal,"UNAM Motorsports\nMexico City",4,-1,2018-07-01,2019-07-01,#8acade
+"Manufacturing\nProcess Plan Intern","Bilstein\nHamilto, OH",5,1,2019-08-01,2020-02-01,#8acade
+Compliance Analyst,"Pross\nMexico City",6,1,2021-04-16,2022-03-01,#8acade
+Project Manager,"Pross\nMexico City",6,-1,2022-03-01,2022-08-05,#8acade
+Data Scientist,"INAI\nMexico City",0,1,2022-10-01,2023-06-01,#eebbff
+Data Scientist,"Liverpool\nMexico City",7,1,2023-09-01,2023-12-01,#8acade
