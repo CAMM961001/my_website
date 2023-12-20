@@ -1,6 +1,6 @@
-import json
 import pandas as pd
 import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
 
 from matplotlib import rcParams
 from settings import Settings
@@ -22,28 +22,29 @@ today = pd.Timestamp.today().date()
 # ============================ Timeline =================================
 # =======================================================================
 
-# Open timeline asset file
-with open(settings.config['path']['timeline'], 'r') as file:
-    df_ = json.load(file)
-
 # Data preprocess for timeline visualization
 df_ = (
-    pd.DataFrame(df_)
+    pd.read_csv(settings.config['path']['timeline'])
     .assign(
-        inicio = lambda df_: pd.to_datetime(df_.inicio, format='%d/%m/%Y')
-        ,fin = lambda df_: pd.to_datetime(df_.fin, format='%d/%m/%Y')
-        ,clase = lambda df_: df_.clase.astype(int)
+        nombre = lambda _df: _df.nombre.str.replace('\\n','\n')
+        ,empresa = lambda _df: _df.empresa.str.replace('\\n','\n')
+        ,inicio = lambda df_: pd.to_datetime(df_.inicio, format='%Y-%m-%d')
+        ,fin = lambda df_: pd.to_datetime(df_.fin, format='%Y-%m-%d')
+        ,ypos = lambda df_: df_.ypos.astype(int)
         ,delta = lambda df_: df_.delta.astype(int)))
 
 # Figure specs
 fig, ax = plt.subplots(figsize=(16,6))
-ymin, ymax = df_.clase.min() - 0.5, df_.clase.max() + 0.5
+ymin, ymax = df_.ypos.min() - 0.5, df_.ypos.max() + 0.5
 covid_x = pd.to_datetime('20/03/2020', format='%d/%m/%Y')
+professional = mpatches.Patch(color='#8acade', label='Professional')
+education = mpatches.Patch(color='#c0e6bc', label='Education')
+volunteer = mpatches.Patch(color='#eebbff', label='Volunteer')
 
 # Covid pandemics reference line
 ax.axvline(
     x=covid_x
-    ,color=settings.config['images']['colors']['orange']
+    #,color=settings.config['images']['colors']['orange']
     ,alpha=0.4)
 
 # Covid pandemics annotation
@@ -56,7 +57,7 @@ ax.text(
 # Today reference line
 ax.axvline(
     x=today
-    ,color=settings.config['images']['colors']['orange']
+    #,color=settings.config['images']['colors']['orange']
     ,alpha=0.4)
 
 # Today annotation
@@ -70,27 +71,32 @@ for idx in range(df_.shape[0]):
     # Gráficas
     ax.plot(
         [df_.inicio[idx], df_.fin[idx]]
-        ,[df_.clase[idx], df_.clase[idx]]
+        ,[df_.ypos[idx], df_.ypos[idx]]
         ,linewidth=6
         ,color=df_.color[idx])
     
     ax.scatter(
         x=[df_.inicio[idx], df_.fin[idx]]
-        ,y=[df_.clase[idx], df_.clase[idx]]
+        ,y=[df_.ypos[idx], df_.ypos[idx]]
         ,color=df_.color[idx]
         ,s=100)
     
     ax.text(
         x=df_.inicio[idx]
-        ,y=df_.clase[idx] + 0.35*df_.delta[idx]
+        ,y=df_.ypos[idx] + 0.35*df_.delta[idx]
         ,s=df_.nombre[idx]
         ,va='center')
 
 # Figure annotations and styling
 ax.set_ylim(bottom=ymin ,top=ymax)
 ax.set_yticks(
-    ticks=df_.clase.unique()
-    ,labels=df_.empresa.unique())
+    ticks=df_.ypos.unique()
+    ,labels=df_.empresa.unique().astype(str))
+
+ax.legend(
+    loc='lower center'
+    ,bbox_to_anchor=(0.5,-0.15)
+    ,ncol=3, fancybox=True, handles=[professional, education, volunteer])
 
 ax.grid(axis='y', alpha=0.25)
 ax.spines['top'].set_visible(False)
