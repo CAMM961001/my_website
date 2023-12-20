@@ -50,6 +50,17 @@ with st.sidebar:
     
     sb_.profile_picture()
 
+    # Profile description
+    st.markdown(
+        body=f'''
+        <h1 style="text-align: center;">
+            Data Scientist at
+            <br>
+            <a href="https://www.elpuertodeliverpool.mx/" style="color: {settings.toml_config["theme"]["primaryColor"]}; text-decoration:none;">
+            El Puerto de Liverpool</a>
+        </h1>'''
+        ,unsafe_allow_html=True)
+
 
 # -------------------------------------------------------------- PORTFOLIO
 
