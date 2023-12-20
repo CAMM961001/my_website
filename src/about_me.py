@@ -99,6 +99,7 @@ class AboutMe:
             ,'UM10 Kickoff Photo Shooting, 2019'
             ,'Bilstein MPP Process Team'
             ,'ITAM CDAS Projects Presentation'
+            ,'Liverpool Purchasing Analytics Team'
         ]
 
         # Load images
