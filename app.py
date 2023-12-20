@@ -116,20 +116,22 @@ elif selected == settings.config['styling']['pages'][1]:
     
     pages_ = AboutMe()
 
-    # Page title
-    st.title(':wave: About Me')
-    st.markdown('---')
+    # Section titles
+    st.title('About Me')
 
     # Section content
+    st.markdown('---')
     col1, col2 = st.columns((3,1))
     with col1:
-        st.write(pages_.description[0], unsafe_allow_html=True)
-        
-        # Section header
-        st.header(':mantelpiece_clock: My resume in a timeline')
+        st.header(':mantelpiece_clock: Professional Timeline')
         pages_.timeline()
+        
+        st.markdown('---')
+
+        st.write(pages_.description[0], unsafe_allow_html=True)
     
     with col2:
+        st.header('Galery')
         pages_.side_images()
 
     st.markdown('---')

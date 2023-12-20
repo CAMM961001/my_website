@@ -58,10 +58,6 @@ class AboutMe:
             participated during four years in the {self.FSAE} design series with {self.UNAMMS}, 
             which is a really cool project and I strongly encourage you to visit it.
             </br>
-            <br>
-            Anyway, if you're more of a visual person that's no problem, here's a nice 
-            visual that synthesizes my professional trajectory...
-            </br>
         </p>"""]
     
 
