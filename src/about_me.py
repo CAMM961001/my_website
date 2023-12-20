@@ -21,6 +21,7 @@ class AboutMe:
         self.FSAE = f'<a href="https://www.fsaeonline.com/" style="color: {settings.toml_config["theme"]["socialMediaColor"]}; text-decoration:none; font-weight:bold">FSAE</a>'
         self.UNAM = f'<a href="http://www.fi-a.unam.mx/" style="color: {settings.toml_config["theme"]["socialMediaColor"]}; text-decoration:none; font-weight:bold">UNAM School of Engineering</a>'
         self.UNAMMS = f'<a href="https://unam.pro/" style="color: {settings.toml_config["theme"]["socialMediaColor"]}; text-decoration:none; font-weight:bold">UNAM Motorsports</a>'
+        self.LIVERPOOL = f'<a href="https://www.elpuertodeliverpool.mx/" style="color: {settings.toml_config["theme"]["socialMediaColor"]}; text-decoration:none; font-weight:bold">El Puerto de Liverpool</a>'
 
         # Site content
         self.description = [
@@ -35,18 +36,19 @@ class AboutMe:
             to download it if that's what you're looking for.
             </br>
             <br>
-            Moving on, I'm a Data Scientist experienced in manufacturing processes, and 
-            automation of financial services back-end processes. My specialization 
-            covers end-to-end data analytics solutions, from data engineering to 
-            Business Intelligence. I'm interested on professional challenges involving 
-            Machine Learning and Statistical Modeling to leverage data-driven decisions.
+            Moving on, I'm a Data Scientist experienced in manufacturing processes, 
+            financial services, and retail industry, currently working at {self.LIVERPOOL}
+            which is one of the biggest retailers in Mexico. My specialization 
+            covers end-to-end data science solutions, from data engineering to 
+            end-user dashboards and storytelling. I'm interested in professional 
+            challenges involving Machine Learning and Statistical Modeling.
             </br>
             <br>
-            I'm currently studying a full time MSc. in Data Science at {self.ITAM}, 
-            where I additionally volunteer as Data Scientist with {self.INAI} (Mexico's 
-            National Institute for Information Accessibility) through {self.CDAS}, 
-            which is ITAM's extracurricular organization responsible for tackling diverse 
-            social topics powered by data analytics.
+            I'm a recent graduate from the MSc. in Data Science at {self.ITAM}, 
+            where I volunteered as Data Scientist with {self.INAI} (Mexico's 
+            National Institute for Information Accessibility and Transparency) through 
+            {self.CDAS}, which is ITAM's extracurricular organization responsible for 
+            tackling diverse social topics powered by data analytics.
             </br>
             <br>
             Prior to this, I worked at {self.PROSS} initially as Compliance Analyst and 
@@ -60,26 +62,10 @@ class AboutMe:
             Anyway, if you're more of a visual person that's no problem, here's a nice 
             visual that synthesizes my professional trajectory...
             </br>
-        </p>"""
-        ,"""
-        <p style="text-align: justify">
-        </p>
-        """,
-        """
-        <p style="text-align: justify; font-size: {settings.fontsize}px">
-            <br>
-            If my techinal skills were a first person shooter videogame, I would
-            play them in the following skill level:
-            </br>
-        </p>
-        """
-        ]
+        </p>"""]
     
 
     def timeline(self):
-        # Section description
-        st.write(self.description[1], unsafe_allow_html=True)
-
         # Load previously generated image
         fig_ = Image.open(settings.config['images']['timeline'])
 
