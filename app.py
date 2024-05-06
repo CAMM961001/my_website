@@ -54,10 +54,10 @@ with st.sidebar:
     st.markdown(
         body=f'''
         <h1 style="text-align: center;">
-            Data Scientist at
+            Lead Data Scientist at
             <br>
-            <a href="https://www.elpuertodeliverpool.mx/" style="color: {settings.toml_config["theme"]["primaryColor"]}; text-decoration:none;">
-            El Puerto de Liverpool</a>
+            <a href="https://mx.havas.com/" style="color: {settings.toml_config["theme"]["primaryColor"]}; text-decoration:none;">
+            Havas Media Group</a>
         </h1>'''
         ,unsafe_allow_html=True)
 
