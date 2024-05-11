@@ -12,11 +12,18 @@ class SideBar:
         """Initialize sidebar static elements"""
         self.resume = settings.config['path']['resume']
         self.profile = Image.open(settings.config['images']['profile'])
+        self.skills = Image.open(settings.config['images']['skills'])
+
 
 
     def profile_picture(self):
         """Function to render profile picture"""
         st.image(self.profile)
+    
+
+    def skills_picture(self):
+        """Function to render profile picture"""
+        st.image(self.skills)
 
 
     def download_resume(self):

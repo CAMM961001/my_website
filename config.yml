@@ -24,6 +24,7 @@ path:
 
 images:
   profile: "images/profile.png"
+  skills: "images/icons/skills.png"
   timeline: "images/timeline.png"
   colors:
     blue: "#8acade"

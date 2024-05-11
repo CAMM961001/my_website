@@ -51,6 +51,9 @@ with st.sidebar:
     sb_.profile_picture()
 
     # Profile description
+    st.write('---')
+    sb_.skills_picture()
+
     st.markdown(
         body=f'''
         <h1 style="text-align: center;">
