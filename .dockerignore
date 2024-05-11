@@ -1,0 +1,4 @@
+# Ignore env dirs
+*/venv
+*/virtual-env
+*/dev-env
