@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miguel Castaneda</title>
+    <meta name="description" content="Portfolio of Miguel Castaneda, a data professional">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./assets/images/favicon.ico">
+    <!-- Feather Icons for lightweight icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo"><a href="#">MiguelCastaneda</a></div>
+            <nav>
+                <div class="mobile-menu-btn" id="mobile-menu-btn">
+                    <i data-feather="menu"></i>
+                </div>
+                <ul id="nav-menu">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-image">
+                    <img src="./assets/images/profile.jpeg" alt="Profile Picture">
+                </div>
+                <div class="hero-content">
+                    <h1>Miguel Castaneda, <br>a data professional</h1>
+                    <p>Doing Data Science during the day, piano and bass player at night. NFL geek and a New England Patriot at heart.</p>
+                    <a href="#portfolio" class="btn">View My Work</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                            With over 4 years of experience in data science and machine learning across marketing, retail, and media industries, I have a passion for building data products and data architectures.
+                        </p>
+                        <p style="color: var(--text-secondary);">
+                            My expertise ranges from data engineering to deploying production-grade machine learning models on cloud infrastructure. I hold multiple Google Cloud certifications, and have hands-on experience with AWS and Databricks.
+                        </p>
+                        
+                        <div class="resume-container">
+                             <a href="./assets/miguel_castaneda.pdf" class="btn btn-outline" download>Download Resume</a>
+                        </div>
+                        
+                        <div class="badges-container">
+                            <img src="./assets/badges/ml-eng.png" alt="GCP ML Engineer" class="badge" onclick="window.open('https://www.credly.com/badges/8a7e61cc-8d40-4104-881d-8b24c0e0e471/public_url', '_blank')">
+                            <img src="./assets/badges/cloud-dev.png" alt="GCP CloudDevr" class="badge" onclick="window.open('https://www.credly.com/badges/2244c800-31ee-4409-8367-68f5ef064779/public_url', '_blank')">
+                        </div>
+
+                        <h3>The Big Guns</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag-main">Google Cloud</span>
+                        </div>
+                        <div class="skills-list">
+                            <span class="skill-tag">Cloud Storage</span>
+                            <span class="skill-tag">Cloud SQL</span>
+                            <span class="skill-tag">FireStore</span>
+                            <span class="skill-tag">BigQuery</span>
+                            <span class="skill-tag">Compute Engine</span>
+                            <span class="skill-tag">Vertex AI</span>
+                            <span class="skill-tag">Agent Builder</span>
+                            <span class="skill-tag">Looker</span>
+                        </div>
+                        <div class="skills-list">
+                            <span class="skill-tag-main">Databricks</span>
+                        </div>
+                        <div class="skills-list">
+                            <span class="skill-tag">ETL Pipelines</span>
+                            <span class="skill-tag">Unity Catalog</span>
+                            <span class="skill-tag">DBFS</span>
+                            <span class="skill-tag">SQL Warehouse</span>
+                            <span class="skill-tag">ML Notebooks</span>
+                            <span class="skill-tag">Vertex AI</span>
+                            <span class="skill-tag">Agent Builder</span>
+                            <span class="skill-tag">Looker</span>
+                        </div>
+                        <div class="skills-list">
+                            <span class="skill-tag-main">Amazon Web Services</span>
+                            <span class="skill-tag">S3</span>
+                            <span class="skill-tag">EC2</span>
+                            <span class="skill-tag">RDS</span>
+                        </div>
+                        <div class="skills-list">
+                            <span class="skill-tag-main">BigData & MLOps</span>
+                            <span class="skill-tag">PySpark</span>
+                            <span class="skill-tag">MLFlow</span>
+                            <span class="skill-tag">MLLib</span>
+                        </div>
+
+                        <h3 style="margin-top: 1rem;">Python</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag-main">Analysis & Visualization</span>
+                        </div>
+                        <div class="skills-list">
+                            <span class="skill-tag">Matplotlib</span>
+                            <span class="skill-tag">Plotly</span>
+                            <span class="skill-tag">Seaborn</span>
+                            <span class="skill-tag">Streamlit</span>
+                            <span class="skill-tag">Dash</span>
+                        </div>
+                        <div class="skills-list">
+                            <span class="skill-tag-main">ETL</span>
+                            <span class="skill-tag">Numpy</span>
+                            <span class="skill-tag">Pandas</span>
+                            <span class="skill-tag">Polars</span>
+                        </div>
+                        <div class="skills-list">
+                            <span class="skill-tag-main">Geo-Analysis</span>
+                            <span class="skill-tag">Geopandas</span>
+                            <span class="skill-tag">PySal</span>
+                            <span class="skill-tag">H3</span>
+                        </div>
+                        <div class="skills-list">
+                            <span class="skill-tag-main">Machine Learning</span>
+                            <span class="skill-tag">Tensorflow</span>
+                            <span class="skill-tag">ScikitLearn</span>
+                            <span class="skill-tag">statsModels</span>
+                        </div>
+                        <div class="skills-list">
+                            <span class="skill-tag-main">API</span>
+                            <span class="skill-tag">Flask</span>
+                            <span class="skill-tag">FastAPI</span>
+                            <span class="skill-tag">Requests</span>
+                        </div>
+
+                        <h3 style="margin-top: 1rem;">Other</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">GitHub</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Postman</span>
+                        </div>
+                    </div>
+                    <div id="timeline-wrapper">
+                        <!-- Timeline injected by JS -->
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div id="project-container" class="project-grid">
+                    <!-- Projects will be injected here by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery">
+            <div class="container">
+                <h2 class="section-title">Life & Experience</h2>
+                <div class="gallery-container">
+                    <div class="gallery-wrapper" id="gallery-wrapper">
+                        <!-- Images injected by JS -->
+                    </div>
+                    <div class="gallery-controls">
+                        <div class="gallery-caption" id="gallery-caption"></div>
+                        <div class="gallery-indicators" id="gallery-indicators"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <footer>
+                <div class="container">
+                    <div class="social-links">
+                        <a href="https://github.com/CAMM961001" target="_blank" aria-label="GitHub"><i data-feather="github"></i></a>
+                        <a href="https://www.linkedin.com/in/miguel-angel-castaneda-martinez-b0a566142/" target="_blank" aria-label="LinkedIn"><i data-feather="linkedin"></i></a>
+                        <a href="mailto:miguel.castama@outlook.com" aria-label="Email"><i data-feather="mail"></i></a>
+                    </div>
+                    <p style="color: var(--text-secondary);">© 2025 Miguel Castaneda</p>
+                </div>
+            </footer>
+        </section>
+    </main>
+
+    <div id="badge-modal" class="badge-modal">
+        <!-- Image injected by JS -->
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
