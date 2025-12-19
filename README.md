@@ -1,4 +1,4 @@
-# My Website
+# Project Portfolio
 
 ## Images aspect ratio
 
@@ -7,37 +7,34 @@ For the several images in the app apart from the profile picture, utilize `1:2.6
 * Height: 12.7 [cm]
 * Width: 33 [cm]
 
-## Cloud Run Deployment
+## CI/CD
 
-It's recommended to test the Dockerfile build by deploying it locally. To do so, execute the following commands:
+All work should be done in the `dev` branch, followed by a pull request to `main`. 
 
-* Build container image:
-
-```sh
-docker build -t my-website .
+```mermaid
+---
+config:
+  logLevel: 'debug'
+  theme: 'base'
+  gitGraph:
+    showBranches: false
+---
+gitGraph
+   commit
+   commit
+   branch dev
+   checkout dev
+   commit
+   commit
+   checkout main
+   merge dev tag: "PR Merge"
 ```
 
-* Run docker container
+On merge to `main`, a GitHub Action updates the storage bucket for the main application, in accordance with the following architecture:
 
-```sh
-docker run -p 8080:8080 my-website
-```
+![Architecture](images/architecture.drawio.png)
 
-Once the Dockerfile builds the container properly, deploy to Cloud Run with the following commands:
-
-* Load the container image to GCP Artifact Registry:
-
-```sh
-gcloud builds submit --tag gcr.io/project-portfolio-422515/my-website --project=project-portfolio-422515
-```
-
-* Deploy CloudRun Service:
-
-```sh
-gcloud run deploy --image gcr.io/project-portfolio-422515/my-website:latest --platform managed --project project-portfolio-422515 --allow-unauthenticated
-```
-
-# References
+## References
 
 * [Íconos de Bootstrap](https://icons.getbootstrap.com/)
 * [Generador de fotos de perfil](https://picofme.io/)
