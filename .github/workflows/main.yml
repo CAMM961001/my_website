@@ -32,4 +32,4 @@ jobs:
     # Sincronización del contenido
     - name: 'Deploy to GCS'
       run: |
-        gcloud storage rsync ./app gs://[NOMBRE_DE_TU_BUCKET] --recursive --delete-unmatched-destination-objects
+        gcloud storage rsync ./app gs://www.miguel-castaneda.com --recursive --delete-unmatched-destination-objects
